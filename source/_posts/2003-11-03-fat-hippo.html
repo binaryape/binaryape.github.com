@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Fat Hippo"
+published: 1
+category: "Ancient Archives"
+---
+<p>I've been using <a href="http://perl.apache.org/docs/1.0/api/Apache/Status.html">Apache::Status</a> to neurotically peer inside my Mod_Perl project. The information it provides is useful, interesting, and more than a little baffling. Things take up much more memory than I'd expected. For instance:
+<code></p>
+
+<h1>Set value</h1>
+
+<p>if (@_) {$self-&gt;{skey} = shift;}
+</code>
+appears to take up 428 bytes of RAM when compiled. The XML::RSS module appears to be adding 832k. Thank goodness for shared memory... Hippo is a rather fat application.</p>
+
+

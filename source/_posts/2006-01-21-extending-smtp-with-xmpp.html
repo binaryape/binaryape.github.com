@@ -1,0 +1,49 @@
+---
+layout: post
+title: "Extending SMTP with XMPP"
+published: 1
+category: "Ancient Archives"
+---
+<p>I've recently been pondering the benefits of adding an extra header to email messages to carry details of the sender's XMPP/Jabber address. Something like:</p>
+
+<p>X-XMPP-Identity: binaryape@jabber.org</p>
+
+<p>This header could be added by the sender's email client, or added automatically by an organisation's gateway SMTP server for all outgoing email.</p>
+
+<p>At first I thought that this header could help the email message recipient switch to a alternate (or just better) form of communication for their reply, and maybe look up some more information about the sender. A mixture of gentle propaganda and convenience. Now I'm wondering if putting XMPP headers into legacy email messages could be much more useful...</p>
+
+<p>SMTP is a fire-and-forget protocol. Once a message has been sent the sending mail client and gateway server have nothing more to do with it. The message is passed along from server to server and altered at each stage of the process. When the email message reaches it's destination it offers no more information to the recipient than that contained in its easily forged headers. SMTP servers' conversations are about passing a message along, nothing more.</p>
+
+<p>As a result, the problems of spam, viruses, and identity issues are threatening to make SMTP email unusable, and require a large waste of sysadmin's time and network resources to resist.</p>
+
+<p>The XMPP protocol is much more flexible. Conversations between servers can be varied, rich and stateful. Message origins are difficult to forge. Clients and gateway servers can look up information about the message's sender and organisation. Jabber is rather spam-resistant.</p>
+
+<p>I'm not alone in thinking that SMTP mail is beyond help. Could XMPP and Jabber replace SMTP and conventional email? I think so. With a few more extensions to the current Jabber protocol, all of SMTP email's functionality could be provided by XMPP.</p>
+
+<p>Unfortunately the SMTP user-community is the biggest, stupidest, most conservative group of people using the Internet: it's everyone. Migrating the Internet away from SMTP is going to be difficult and slow.</p>
+
+<p>This is where an X-XMPP-Identity header in SMTP email could be very useful. Instead of trying to prise people away from SMTP mail, a small set of headers linking an email message to an XMPP identity could be used to create a hybrid, XMPP-enhanced SMTP. People with Jabber accounts could send SMTP messages that refer to their Jabber account, and traditional email software could use this information to access services provided by Jabber. For the sake of brevity I'm going to call this idea "XSMTP".</p>
+
+<p>The receiving email client (Thunderbird for example) or the receiving gateway server (Postfix) could use the X-XMPP-Identity header to:</p>
+
+<ul>
+<li>Look up information about the sender using Jabber Service Discovery</li>
+<li>Check the authenticity of the message and the identity of the sender</li>
+<li>Provide the sender with information about the message's progress</li>
+<li>Provide a faster, privileged route for "XSMTP" messages</li>
+<li>A message could be sent and received by SMTP email, but replies "upgraded" to XMPP</li>
+</ul>
+
+<p>The problem, of course, is making sure the X-XMPP-Identity header is not forged. All I can think of so far is:</p>
+
+<p>a) When sending a message, the email message id is registered with a Jabber service. The sender's Jabber service would confirm via XMPP that an email with that message-id was sent at a particular time from a particular IP address. This seems a bit too involved.</p>
+
+<p>or</p>
+
+<p>b) Some form of calculated hash value is included as "X-XMPP-Hash". When this hash is sent to the "XSMTP" component on the sender's Jabber service by an XSMTP, it can be checked programatically by the component, which can then reassure the receiving client or gateway server. The hash would be made up of elements unique to the message (id, time, sending IP address) and a magic phrase known only to the sender's client and the Jabber component providing the XSMTP service. Would this be enough?</p>
+
+<p>XSMTP features could be easily implemented entirely within existing email filters such as Spam Assassin or MailScanner, or added as an extension to clients like Thunderbird or Outlook. Deployment would require a Jabber account and access to relevant Jabber services, but many large organisations already provide these and encouraging Jabber is one of the benefits of this idea anyway.</p>
+
+<p>I've not thought this through enough yet, and there is probably some horrible, obvious flaw that I've missed, but so far I'm rather excited by this idea. It seems to offer a way of improving existing SMTP email without breaking compatibility, and provide a gentle route from SMTP to whatever Jabber offers as a replacement.</p>
+
+

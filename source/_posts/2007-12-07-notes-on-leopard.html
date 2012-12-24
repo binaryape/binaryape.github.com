@@ -1,0 +1,52 @@
+---
+layout: post
+title: "Notes on Leopard"
+published: 1
+category: "Ancient Archives"
+---
+<p>
+I normally wait and let other people suffer from Point Zero problems, but I got Leopard on release day and immediately upgraded. (This was written weeks ago)
+</p><p>
+Leopard would not install at first - the installer would boot, but my disk wasn't shown. It was visible to Disk Utility, and it was even mounted (I like having a shell available in the installer!), but it would not appear. I tried three or four times. My boot partition was called "system". On a hunch I changed its name and tried again, and it appeared immediately. I've not been able to repeat the experiment, so I'm not 100% sure the name was causing the problem.
+</p><p>
+The extras in the installer (Disk Utility, Terminal) are nice. A tetris game or web browser would have been even nicer, as the install took rather a long time*.
+</p><p>
+Network browsing (Samba, AFP) seems much better. Until now Mac OS hasn't been very good at interacting with LAN file shares, but I  think Leopard has got it right at last. Overall speed seemed good too. Windows tends to get slower with each new version, but Mac OS X gets faster.
+</p><p>
+LDAP and Kerberos integration is looking very strong indeed - all sorts of software can take advantage of directory information and Kerberos authentication. Apple are using Sun's NFS automounter and it's far better than static mounts: just browse on the commandline by cd-ing to servers by name, with Kerberos there to make NFS useful again. There are various LDAP tools that I expect to spend days playing with, like catnip for sysadmins.
+</p><p>
+Spotlight seems to be much more effective and faster. Previously I've not been impressed, but things like Smart Folders now look practical rather than just good in principle.
+</p><p>
+Coverflow views seem slow and gimmicky. Maybe on a faster Mac they'd be more fluid and responsive.
+</p><p>
+At first I dismissed the Finder's new Quick Look preview feature as just a copy of similar elements of Windows and KDE desktops, but it's turned out to be much more useful and convenient than I expected.
+</p><p>
+The Dock graphics seem to be a bit tattier. I like the reflective surface but the icons don't look quite right. My Mac is a PPC Mac Mini without accelerated graphics, and I wonder if Apple are assuming more powerful Macs when optimising the display.
+</p><p>
+Leopard's desktop style (especially the blue colour and icons) reminds me of an old Gnome theme. This is good.
+</p><p>
+Time Machine will not work with network drives, or DMG disk images on network drives. This is very disappointing.
+</p><p>
+Spaces provides a good implementation of multiple desktops, but there's no facility to name the spaces. Clicking on the Spaces menu displays a list of numbered desktops with blank areas where names would fit, but there's no way to set them. Odd.
+</p><p>
+The new voice is rather good. There's just one, and I've heard better, but a huge improvement over the ancient ones.
+</p><p>
+SMB/CIFS mounts are faster and friendlier. There's still no reliable way to get them to mount automatically on login other than via an Automator script, but that works well enough. I'm not sure if it would be better to use Samba for CIFS, or Netatalk for AFP.
+</p><p>
+The default desktop and login screen image is rather gloomy, and a strange choice. Replacing /System/Library/CoreServices/DefaultDesktop.jpg fixes that easily enough.
+</p><p>
+'Get Info' on the Finder's contextual menus has moved, and 'Move to Trash' is dangerously close to where 'Get Info' used to be.
+</p><p>
+Bundled developer software is much better, with less need to head to MacPorts straight away. Subversion is there, Ruby, Ruby Gems, Mongrel and Ruby On Rails too, all with DTrace patches applied. Apple's bundling of Ruby on Rails with all Macs is rather significant, I think.
+</p><p>
+I'm disappointed by the delayed arrival of ZFS and iSCSI in Mac OS. Hopefully they'll turn up soon.
+</p><p>
+TextEdit can open and save OpenDocument (.odt) word processor files! This is good news.
+</p><p>
+X11.app  seems to be broken somehow. It doesn't X start from the Dock properly, and X forwarding over SSH  during session setup following SSH logins fails - I can't simply ssh to a Linux server and run graphical apps. It used to work fine under Tiger.
+</p><p>
+I've had very few problems with incompatible software. The only major trouble so far is that Missing Sync 5 won't sync calendars properly (partly due to the authors not updating it, and partly due to bugs in iCal and iSync) and NeoOffice is refusing to open some files over CIFS. Overall I'm very pleased with Leopard but looking forward to improvements.
+</p><p>
+* Backing up before upgrading took even longer. Fortunately Metroid Prime 3 arrived the same morning, so I was distracted, confused and entertained by that instead.
+</p>
+

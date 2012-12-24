@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Benchmarking Filesystems"
+published: 1
+category: "Ancient Archives"
+---
+<p>I tend to use XFS for most Linux partitions, and Reiser4 for /tmp and filesystem databases with tens of thousands of files, as it won't run out of inodes.</p>
+
+<p>In these benchmark tests XFS performs as I would expect, but the Reiser4 and JFS results surprised me. Reiser4's handling of actions on big trees doesn't live up to it's reputation, and I've always viewed JFS as well-built but slow, no-where near as fast as the benchmarking indicates.</p>
+
+<p>I suppose this shows the value of research over conventional wisdom.</p>
+
+<p>Link: <a href="http://linuxgazette.net/122/piszcz.html">Benchmarking Filesystems Part II</a></p>
+
+

@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Fun with Perl"
+published: 1
+category: "Ancient Archives"
+---
+<p>Theme 1 for today: Perl problems</p>
+
+<p>Version 1.3 of the <a href="http://www.netgear.co.uk/html/prod_wireless_802_11_b_fm114p.htm">Netgear FM114P router</a> has an unwelcome feature: whenever I use the <a href="http://www.cpan.org">CPAN</a> shell to download a Perl module, it crashes, every time, taking my Internet connection with it. Downgrading to the 1.1 firmware fixes this, thankfully. Netgear are working on a fix. It's a really great bit of kit otherwise.</p>
+
+<p>Perl 5.8 has broken a number of my apps, including <a href="http://binary-ape.sourceforge.net/">Fingerbob</a>, and also broken <a href="http://www.amazon.co.uk/exec/obidos/ASIN/1565922433/ref=sr_aps_books_1_1/202-3472097-1871834">Perl Cookbook</a> example code:</p>
+
+<p><code>while (accept (CLIENT, SERVER)) {
+    # do something here with the client connection
+}</code></p>
+
+<p>This used to loop, but now it doesn't. It's all because of the new threading system in Perl 5.8. It's not hard to fix but it was tricky to hunt down - I didn't expect Cookbook code to fail and couldn't find this issue in the Perl changelog. New, much improved version of Fingerbob due soon.</p>
+
+

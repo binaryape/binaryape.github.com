@@ -1,0 +1,18 @@
+---
+layout: post
+title: "Mod_rails saves the day?"
+published: 1
+category: "Ancient Archives"
+---
+<p>
+Hosting has always been the weakest aspect of <a href="http://www.rubyonrails.org/">Ruby on Rails</a>. You can't simply upload a set of files and expect them to run, as you can with PHP thanks to mod_php.  FastCGI is flaky (I'm still trying to escape it at work). A proxied pack of <a href="http://mongrel.rubyforge.org/">Mongrels</a> is great when given a dedicated server and enough care and attention, but awkward and demanding on shared hosting. 
+</p><p>
+<a href="http://www.modrails.com/index.html">Phusion's Passenger</a>, an Apache module also referred to as mod_rails, <em>looks</em> as if it's exactly what many people have wanted: upload a Rails application to web host using Passenger and it just works. Passenger looks after managing your application for you, restarting it and spawning new backend processes as needed. It's even easy to install - just type <code>gem install passenger</code> and then tweak your Apache config.
+</p><p>
+I'm not going to switch my production services at work to this for quite a while, in fact, as they're hosted on a dedicated box there may be little benefit (and Mongrel looks like a better fit) but if it performs as advertised it should be enormously useful for web hosts, ISPs and universities. The issue of RAM usage remains, but that isn't a problem only for Rails apps. 
+</p><p>
+Well worth watching.
+</p><p>
+Link: <a href="http://www.modrails.com/index.html">Phusion Passenger (a.k.a. mod_rails)</a>
+</p>
+

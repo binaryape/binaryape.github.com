@@ -1,0 +1,37 @@
+---
+layout: post
+title: "Goodbye spam"
+published: 1
+category: "Ancient Archives"
+---
+<p>We're getting about 40 spam email messages a day now. At work I've set up the excellent and free <a href="http://www.sng.ecs.soton.ac.uk/mailscanner/">MailScanner</a> to mark spam and make email messages safe, but that's a little excessive for my home network. I don't use Windows so there's very little danger from viruses at present, and I don't use Sendmail which MailScanner requires.</p>
+
+<p>Instead I've just used <a href="http://www.spamassassin.org/">SpamAssassin</a> and a very simple procmail script. A quick summary of the process is below. Now I don't need to weed out spam from my inbox every evening.</p>
+
+<p>This is Unix only, so Windows users needn't bother reading any more, although there are <a href="http://www.deersoft.com/">commercial, windows-compatible</a> versions of  SpamAssassin.</p>
+
+<p>If your mail system already uses procmail (for example, Mandrake and Redhat Linux using Sendmail or Postfix) all you need to do is:</p>
+
+<ol>
+<li>Install SpamAssassin. Just download it, unpack the tar, and as root type</li>
+</ol>
+
+<p>perl Makefile.PL ; make ;  make test ; make install</p>
+
+<ol>
+<li>Edit your $HOME/.procmailrc script to include this at the top:</li>
+</ol>
+
+<p>:0fw
+| /usr/bin/spamassassin</p>
+
+<ol>
+<li>Add a filter to your email program to move mail containing the header</li>
+</ol>
+
+<p>X-Spam-Status: Yes</p>
+
+<p>into a special spam folder. That way you can check for mistakes occassionally.</p>
+
+<p>There are many more options and settings to tune SpamAssassin and add more features, but that's all  you need. If in doubt, read the documentation.</p>
+

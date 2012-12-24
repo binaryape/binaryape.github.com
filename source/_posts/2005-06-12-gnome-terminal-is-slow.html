@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Gnome-Terminal is slow"
+published: 1
+category: "Ancient Archives"
+---
+<p>I'm watching Fljud read 1000 LDAP entries and send them to Psi (running on the same PC) as Jabber disco entities. Fljud is using about 20% CPU. Psi is using about 10% CPU. Gnome Terminal, which is displaying about 8 lines of debug text for each record as it is processed by Fljud, is taking most of the rest, roughly 65%. That's an awful lot of processing power (and a bottleneck) to print some text.</p>
+
+<p>When I use  XTerm instead of Gnome-Terminal  Fljud and Psi both use about 40% of CPU time each, and XTerm uses 10%. Redirecting debug to /dev/null, a file,  or turning it off, leaves Fljud and Psi to fight it out and removes the bottleneck. This isn't a major problem, but it's still baffling: what on earth is Gnome-Terminal doing that makes so slow?</p>
+
+
