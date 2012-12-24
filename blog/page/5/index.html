@@ -1,0 +1,960 @@
+
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Ape::Tracks</title>
+  <meta name="author" content="Binaryape">
+  <link rel="author" href="humans.txt">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  
+    
+  
+  <meta name="description" content=" Personal blog by Pete Birkinshaw. Any opinions expressed are not those of any employer, client, or mythological creature. ">
+  
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://binaryape.github.com/blog/page/5/">
+  <link href="/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Ape::Tracks" type="application/atom+xml">
+  <meta name="og:type" content="website" />
+  <meta name="og:site_name" content="Ape::Tracks" />
+  <meta name="og:title" content="Ape::Tracks" />
+  <meta name="og:description" content=" Personal blog by Pete Birkinshaw. Any opinions expressed are not those of any employer, client, or mythological creature. " />
+  <meta name="og:url" content="http://binaryape.github.com/blog/page/5/index.html"/>
+  <meta name="url" content="http://binaryape.github.com/blog/page/5/index.html">
+  
+  <meta name="distribution" content="global">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <div id="front-wrapper">
+  <div id="hero">
+    <div id="hero-inner" class="container">
+      <div class="span10 offset1">
+  <h1>
+    I&#8217;m <em>Binaryape</em>
+  </h1>
+</div>
+
+    </div>
+  </div>
+  <section id="sub-hero">
+    <div class="container">
+      <div class="row">
+  <div class="span4">
+    <h2>About me</h2>
+<p>Photographer, software developer, sysadmin, startup-founder, Buddhist, vegan and Green.</p>
+
+  </div>
+  <div class="span6">
+    
+<h2>Recent public projects</h2>
+<dl id="gh_repos" class="dl-horizontal" data-github-user="binaryape" data-github-repo-count="0" data-github-skip-forks="true">
+  <dd class="loading">Status updating&#8230;</dd>
+</dl>
+<script src="/javascripts/github.js" type="text/javascript"> </script>
+<script src="/javascripts/libs/jXHR.js" type="text/javascript"> </script>
+
+
+  </div>
+  <div class="span2">
+    <h2>Found on</h2>
+
+<a href="https://github.com/binaryape/" rel="tooltip" title="Github"><img class="social_icon" title="Github" alt="github icon" src="/images/glyphicons_381_github.png"></a>
+
+
+
+
+
+
+
+<a href="http://twitter.com/binaryape" rel="tooltip" title="Twitter"><img class="social_icon" title="Twitter" alt="Twitter icon" src="/images/glyphicons_391_twitter_t.png"></a>
+
+
+
+
+
+
+
+<h2>Contact at</h2>
+<a href="mailto:apetracks@binary-ape.org">apetracks@binary-ape.org</a>
+
+
+  </div>
+</div>
+
+    </div>
+  </section>
+  <div class="container">
+    <div class="row" id="post-container">
+    
+    
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/04/mod-rails-saves-the-day-/">Mod_rails Saves the Day?</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Binaryape</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-04-12T00:00:00+01:00" pubdate data-updated="true">Apr 12<span>th</span>, 2008</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='//categories/ancient-archives/'>Ancient Archives</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>
+Hosting has always been the weakest aspect of <a href="http://www.rubyonrails.org/">Ruby on Rails</a>. You can&#8217;t simply upload a set of files and expect them to run, as you can with PHP thanks to mod_php.  FastCGI is flaky (I&#8217;m still trying to escape it at work). A proxied pack of <a href="http://mongrel.rubyforge.org/">Mongrels</a> is great when given a dedicated server and enough care and attention, but awkward and demanding on shared hosting. 
+</p><p>
+<a href="http://www.modrails.com/index.html">Phusion&#8217;s Passenger</a>, an Apache module also referred to as mod_rails, <em>looks</em> as if it&#8217;s exactly what many people have wanted: upload a Rails application to web host using Passenger and it just works. Passenger looks after managing your application for you, restarting it and spawning new backend processes as needed. It&#8217;s even easy to install - just type <code>gem install passenger</code> and then tweak your Apache config.
+</p><p>
+I&#8217;m not going to switch my production services at work to this for quite a while, in fact, as they&#8217;re hosted on a dedicated box there may be little benefit (and Mongrel looks like a better fit) but if it performs as advertised it should be enormously useful for web hosts, ISPs and universities. The issue of RAM usage remains, but that isn&#8217;t a problem only for Rails apps. 
+</p><p>
+Well worth watching.
+</p><p>
+Link: <a href="http://www.modrails.com/index.html">Phusion Passenger (a.k.a. mod_rails)</a>
+</p>
+
+</div>
+  
+  
+
+
+</div>
+
+      </article>
+    
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/04/evil-crumbles-at-her-touch/">Evil Crumbles at Her Touch</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Binaryape</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-04-08T00:00:00+01:00" pubdate data-updated="true">Apr 8<span>th</span>, 2008</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='//categories/ancient-archives/'>Ancient Archives</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>
+Camera-shy Anne Diamond carefully reviews the excellent adult game &#8216;Resident Evil 4&#8217;
+</p><blockquote>
+This game shouldn&#8217;t be allowed to be sold, even to adults
+</blockquote><p>
+and gets so angry that games begin to <em><a href="http://photoshopdisasters.blogspot.com/2008/03/daily-fail-violent-vids-upsetting-our.html">dematerialise</a></em> in her hands.
+</p><p>
+An excellent example of terrible image editing and lazy proofing, via <a href="http://photoshopdisasters.blogspot.com/2008/03/daily-fail-violent-vids-upsetting-our.html">Photoshop Disasters</a>. Also, notice the Daily Mail&#8217;s clever trick of scanning and uploading bits of their own newspaper.
+</p><p>
+Link: <a href="http://www.dailymail.co.uk/pages/live/articles/news/news.html?in_article_id=547008">Anne Diamond gives her chilling verdict (Daily Mail</a>)
+</p>
+
+</div>
+  
+  
+
+
+</div>
+
+      </article>
+    
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/04/what-if-one-of-them-seems-odd-/">What if One of Them Seems Odd?</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Binaryape</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-04-05T00:00:00+01:00" pubdate data-updated="true">Apr 5<span>th</span>, 2008</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='//categories/ancient-archives/'>Ancient Archives</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>
+<img alt="Odd" title="Odd" src="http://apetracks.typepad.com/photos/uncategorized/2008/04/05/odd.png" border="0" style="float: right; margin: 0px 0px 5px 5px;" />
+</p><p>
+I&#8217;m a scruffy semi-bearded man who takes photographs of everyday things, usually wearing boots, baffling t-shirts and a hat. I often get puzzled looks from people: &#8220;Why is that man taking a photo of a wall?&#8221;. I don&#8217;t mind.
+</p><p>
+I expect to be reported as a terrorist at some point if <a href="http://www.nickpotter.net/upload/ct_camera_2008-3.pdf">this stupid campaign</a> spreads from London to Manchester: &#8220;That man is taking pictures of a bus shelter! Call the police!&#8221; That&#8217;s something I do mind.
+</p><p>
+* <a href="http://petitions.pm.gov.uk/photographylaw/">Petition to clarify the laws surrounding photography in public places</a>
+<br />* <a href="http://www.flickr.com/photos/digitalknave/2312150107/">Flickr spoof of the Met Police poster</a>
+<br />* <a href="http://www.epuk.org/News/818/police-officer-forced-photographer-to-delete-images">Birmingham police officer &#8216;forced press photographer to delete images</a>
+<br />* <a href="http://www.sirimo.co.uk/ukpr.php">Free Download - The UK Photographers Rights Guide</a>
+<br />* <a href="http://www.boingboing.net/2008/03/31/londons-spitalfields.html">London&#8217;s Spitalfields market: shoot the architecture, we take away your camera</a>
+</p><p>
+<strong>Update: </strong>Austin Mitchell MP (a keen photographer himself) is going to raise this issue with the Home Office. <a href="http://www.boingboing.net/2008/04/12/help-uk-member-of-pa.html">More at BoingBoing.net.</a> It&#8217;s probably worth sending a letter or email to your local MP.
+</p>
+
+</div>
+  
+  
+
+
+</div>
+
+      </article>
+    
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/04/b-ack-logging/">B(ack)logging</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Binaryape</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-04-05T00:00:00+01:00" pubdate data-updated="true">Apr 5<span>th</span>, 2008</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='//categories/ancient-archives/'>Ancient Archives</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>
+There a few things less interesting than bloggers blogging about their  blogging. Stop reading now.
+</p><p>
+Well, you were warned&#8230;
+</p><p>
+I&#8217;m building up a new collection of unpublished blog entries again, although it&#8217;s nowhere close to the previous queue of over 700 abandoned items. I&#8217;ll often quickly write a few  hundred words about something and then abandon the item.
+</p><p>
+It&#8217;s hard to believe there&#8217;s anything close to quality control going on here, but I only seem to publish about one eighth of the items I type into <a href="http://infinite-sushi.com/software/ecto/">Ecto</a>. Writing something is easy, editing something is much more time consuming. If the item is trivial then it&#8217;s easy to post, but if the item&#8217;s got actual content then I feel uneasy publishing it and tend to leave it in limbo until it&#8217;s too late to be of use.
+</p><p>
+Most of the best things in the backlog are related to my day job and overlap with a great deal of the links I add to <a href="http://del.icio.us/binaryape/">Del.icio.us</a> each day. I&#8217;ve been toying with the idea of starting a second weblog for a while now, and I think I might as well have a go. I&#8217;ll keep Apetracks as a relatively useless personal writing exercise while also posting to a blog dedicated to identity and directory tech. I&#8217;m already amassing a lot of information on this topic for my own use so sharing any gems I come across may be of use to other people. I&#8217;m not an IDM guru but I am rather active at the &#8216;coal face&#8217;; there are plenty of blogs written by IDM consultants but few written by people who deal with real IDM issues day-to-day.
+</p><p>
+I&#8217;ll have a go at actually publishing some content to the new blog before announcing it.
+</p><p>
+I&#8217;m also going to try posting some of the backlog this time rather than just deleting it.
+</p><p>
+While Apetracks isn&#8217;t often updated <a href="http://www.flickr.com/photos/binaryape/">my Flickr photostream</a> gets updates almost every week, and my  <a href="http://del.icio.us/binaryape/">Del.icio.us</a> feed at least once a day. 
+</p>
+
+</div>
+  
+  
+
+
+</div>
+
+      </article>
+    
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/03/a-new-oxford-road-/">A New Oxford Road?</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Binaryape</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-03-07T00:00:00+00:00" pubdate data-updated="true">Mar 7<span>th</span>, 2008</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='//categories/ancient-archives/'>Ancient Archives</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>
+More planned  redevelopment, this time around Oxford Road.
+</p><ul>
+<li>Converting Oxford Road to be tree-lined, pedestrianised, and with it&#8217;s own bus/tram: <strong>A great idea.</strong></li>
+<li>Calling it &#8220;City South&#8221;: <strong>A bad idea.</strong></li>
+<li>Building a slow, confusing website entirely with Flash that contains almost no information: <span style="text-decoration:line-through;">How very 1999!</span> <strong>A bad idea.</strong> </li>
+</ul><p>
+It&#8217;s  common for a very well presented campaign to be nothing but hot air. This seems to the opposite: a great plan badly presented. Which makes a nice change, I suppose.
+</p><p>
+I shouldn&#8217;t criticise without offering an alternative, so I&#8217;ll suggest calling it &#8220;The Corridor&#8221;, since people already talk of &#8216;The Oxford Road Corridor&#8217; (and it sounds academic), and maybe presenting the idea using an accessible and <em>usable</em> site made with that new-fangled HTML.
+</p><p>
+Link:  <a href="http://www.manchestercitysouth.com/">Manchester City South</a> via <a href="http://www.manchesterconfidential.com/property/index.asp?sessionx=IpqiNwB6KDboNwB6IaqiNwA">Manchester Confidential Property - City South: where’s that?</a>
+</p>
+
+</div>
+  
+  
+
+
+</div>
+
+      </article>
+    
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/02/castlerigg-sunset/">Castlerigg Sunset</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Binaryape</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-02-27T00:00:00+00:00" pubdate data-updated="true">Feb 27<span>th</span>, 2008</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='//categories/ancient-archives/'>Ancient Archives</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div>
+<a href="http://www.flickr.com/photos/binaryape/2289170688/" title="photo sharing"><img src="http://farm3.static.flickr.com/2270/2289170688_f359d325d5_m.jpg" alt="" style="border: solid 2px #000000;" /></a>
+<br /><a href="http://www.flickr.com/photos/binaryape/2289170688/">Sunset 10</a> 
+<br />Originally uploaded by <a href="http://www.flickr.com/people/binaryape/">BinaryApe</a>
+</div><p>
+We&#8217;ve been away on a short holiday in the Lake District, with the aim of getting some fresh air and exercise, and some photography practise too if the weather was good.
+</p><p>
+The first evening at the hotel we witnessed a fantastic sunset. I&#8217;ve not seen rays radiating from a sunset before - very beautiful, and it resembled photos of the aurora borealis. They were slowly moving as we watched. Crepuscular rays?
+</p><p>
+Another guest at our hotel took <a href="http://www.ephotozine.com/u31353/gallery/819824">an excellent photo of the same sunset from Castlerigg Stone Circle</a>.
+</p>
+
+</div>
+  
+  
+
+
+</div>
+
+      </article>
+    
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/01/neverland/">Neverland</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Binaryape</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-31T00:00:00+00:00" pubdate data-updated="true">Jan 31<span>st</span>, 2008</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='//categories/ancient-archives/'>Ancient Archives</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>
+I can&#8217;t really add much to this excellent article in the Guardian, based on a Manchester blog:
+</p><p>
+<a href="http://www.guardian.co.uk/society/2007/dec/19/housing.communities">The RenterGirl blog, a heartfelt account of life as an urban nomad</a>
+</p><p>
+The blog itself has far more gruesome details.
+</p><p>
+To the outsider most of the urban housing developments look similar and are advertised with the same imagery of sleek stylish models, so it&#8217;s easy to assume what they&#8217;re like to live in, and who lives there. In most cases this impression is wrong. Most developers also seem to seem to assume that residents have a lifestyle and requirements that simply don&#8217;t exist in any real way.
+</p><p>
+Hundreds of flats have been built that don&#8217;t suit real life at all. Nowhere to keep a suitcase. Nowhere to put a bin. Nowhere to dry clothes. I viewed one flat that had two tiny bathrooms but  nowhere to put a television, and one where no windows opened and the only &#8216;fresh&#8217; air was from a single pipe emerging from the ceiling. Flats without ovens, with nowhere to dry dishes, or nowhere to <em>store</em> dishes. Whole blocks where the combined moisture from drying clothes and cooking makes the building tropicaly humid, almost stifling.
+</p><p>
+There are blocks of big-name-designed apartments in Manchester where the corridors are spotted with dog shit and one bedroom flats cost £150,000. In the last flat we rented we had the luxury of mushrooms growing in the corridor, damp, dodgy wiring, deafening 24 hour parties and rubbish bags left in the foyer and on stairways.
+</p><p>
+Manchester Council likes to talk of Manchester becoming more like a European city, but most European cities have a mixed population in the city centre. Almost every development in Manchester is chasing the same section of the market. There&#8217;s little room for people wanting to<em> live</em> in the city for the long term, rather than just stay for a few years before moving to Chorlton. There&#8217;s nothing for families and little for elderly people. There&#8217;s  a shortage of GPs and don&#8217;t even try to find a children&#8217;s playground.
+</p><p>
+It&#8217;s not all bad. The problem blocks are usually those with a high number of landlords and short-term renters. Renters themselves are usually fine, but there&#8217;s often a big enough percentage of bad renters (and bad landlords) to damage life for everyone else. Flats that can&#8217;t be lived in as homes, or for long periods, attract people who don&#8217;t live &#8220;normally&#8221;, or socially, and who don&#8217;t give a damn about the area or neighbours because they&#8217;ll be moving on. Many blocks effectively become unmanaged halls of residence for the recently graduated (or even wealthy students). No one plans to stay long, few people care about where they live. The term &#8220;Neverland&#8221; used by RenterGirl is very appropriate. It only takes a few people without a conscience to ruin things for everyone else. I should add that blaming bad residents is only half the story: I think bad landlords are the root cause of the problem.
+</p><p>
+Not everyone living in the city centre is like that, and not all developments are equally troubled. Many older developments tend to be less shiny but much less intensive, with functioning communities and much more respect (there&#8217;s a topical buzzword&#8230;). I think that indicators of better developments can include:
+</p><p>
+* The more owner-occupiers the better.
+<br />* Built in the 1980s or 1990s and still surviving more or less intact.
+<br />* Wider than it&#8217;s tall.
+<br />* A big, strict set of rules for occupants.
+<br />* Self-managed or owned cooperatively.
+<br />* Low service charges can result in poor maintenance later on, although high charges can indicate something&#8217;s gone wrong.
+<br />* Be wary of upper floor flat&#8217;s if there&#8217;s only one lift. It will break.
+<br />* Flats of various sizes , with three bedroom properties that aren&#8217;t token/trophy penthouses. People in larger flats tend to stay longer.
+<br />* Few for-sale signs. People don&#8217;t want to leave the better places.
+<br />* New buyers tend to be attracted by the new developments, so the better/older places are often no more expensive
+</p><p>
+* The management fund should be growing
+<br />* If a recent developer, check the list of outstanding problems submitted to developers: the shorter the better.
+<br />* Check how responsive the management agency is: leaking pipes fixed immediately is not so bad, they could be left for months&#8230;
+</p><p>
+We were rather impressed with what we saw of  <a href="http://www.manchesteronline.co.uk/homesearch/advice/s/166/166504_1800_maintenance_charge_a_year_and_worth_it.html">Granby Village</a> in the city centre (we failed to get a place there) and we&#8217;re now very happy with <a href="http://piccadillyvillage.co.uk">Piccadilly Village</a>. The little <a href="http://www.manchesterhomefinder.org/Info/smithfield/smithfield.shtm">Smithfield</a> estate in the Northern Quarter also interested us, but very few of the properties were for sale (some are probably still Council owned, however).
+</p><p>
+I hope that over time the developments with problems grow established communities as some sort of balanced ecosystem evolves, but in some cases whole buildings can reset: we visited one building that had become almost empty; most owners had deserted it, cutting their loses, and it was gradually being repopulated with hardy frontier settlers ready to repair both the water-damaged plasterwork and the community.
+</p><p>
+Community is key to all this. At a new development on Great Ancoats Street a sign proclaims &#8220;A thriving exciting community!&#8221;. Nobody has moved in yet. A community is more than just a collection of residents, and it isn&#8217;t built ready for sale.<a href="http://www.flickr.com/photos/binaryape/2232786115/" title="Community? by BinaryApe, on Flickr"><img src="http://farm3.static.flickr.com/2262/2232786115_71443eeca8_m.jpg" width="240" height="190" alt="Community?" /></a>
+</p>
+
+</div>
+  
+  
+
+
+</div>
+
+      </article>
+    
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/01/jruby-on-rails/">JRuby on Rails</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Binaryape</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-31T00:00:00+00:00" pubdate data-updated="true">Jan 31<span>st</span>, 2008</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='//categories/ancient-archives/'>Ancient Archives</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>
+<a href="http://jruby.codehaus.org/">JRuby</a> started off looking like a novelty project with little practical use, but in less than a year it&#8217;s become a practical tool, something with definite advantages over it&#8217;s more established rivals. IBM, Oracle and Sun are already using it themselves for web apps. Netbeans 6 has rather good support for Ruby built in, and much as I cringe when running Tomcat servers (from a sysadmin&#8217;s perspective) from a <em>developer&#8217;s</em> point of view .war files are a definite advantage.
+</p><p>
+<a href="http://blog.igorminar.com/2008/01/jruby-on-rails-rewrite-of.html">This article describes</a> what happened when some of Sun&#8217;s Java web developers chose to try JRuby and Ruby On Rails.
+</p><p>
+I think JRuby is going to do very well in 2008.
+</p><p>
+Link: <a href="http://blog.igorminar.com/2008/01/jruby-on-rails-rewrite-of.html">Igor Minar&#8217;s Blog: JRuby on Rails Rewrite of mediacast.sun.com Launched</a>
+</p>
+
+</div>
+  
+  
+
+
+</div>
+
+      </article>
+    
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/01/afflecks/">Afflecks</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Binaryape</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-31T00:00:00+00:00" pubdate data-updated="true">Jan 31<span>st</span>, 2008</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='//categories/ancient-archives/'>Ancient Archives</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div>
+<a href="http://www.flickr.com/photos/binaryape/2233642748/" title="photo sharing"><img src="http://farm3.static.flickr.com/2080/2233642748_fc2ffbd94c_m.jpg" alt="" style="border: solid 2px #000000;" /></a>
+<br /><a href="http://www.flickr.com/photos/binaryape/2233642748/">Save Afflecks</a>
+<br />Originally uploaded by <a href="http://www.flickr.com/people/binaryape/">BinaryApe</a>
+</div><p>
+Another bit of Manchester under threat from corporate mundanity: <a href="http://en.wikipedia.org/wiki/Affleck's_Palace">Afflecks Palace</a> might have <a href="http://designermagazine.tripod.com/SaveAfflecks.html">only a few days left</a>.
+</p><p>
+Link:  <a href="http://www.manchestereveningnews.co.uk/search/?searchterm=afflecks&amp;x=0&amp;y=0">The MEN&#8217;s archive on this sorry saga</a>
+</p><p>
+I tend to blame Manchester City Council for problems like this, but at least Marc Ramsbottom (LibDem, City Centre) <a href="http://marcramsbottom.org.uk/news/000034/save_afflecks_palace.html">is offering support</a>.
+</p>
+
+</div>
+  
+  
+
+
+</div>
+
+      </article>
+    
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/01/did-we-just-win-/">Did We Just Win?</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Binaryape</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-18T00:00:00+00:00" pubdate data-updated="true">Jan 18<span>th</span>, 2008</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='//categories/ancient-archives/'>Ancient Archives</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>
+AOL, owners of the AIM and ICQ instant messaging services, may at long last be opening them up properly, using <a href="http://www.xmpp.org/about/">XMPP</a>.  They&#8217;ve got a beta/test XMPP service running (which is a good sign) but haven&#8217;t announced anything yet. I think we&#8217;ve definitely passed the tipping point now. Google set a good example.
+</p><p>
+This is very unlikely to mean that AOL&#8217;s dropping its own proprietary protocols, or even encouraging the use of XMPP over their own: AIM has some features that aren&#8217;t yet present as standards in XMPP. It&#8217;s possible that they could implement their own extensions as Apple has done, or they may simply implement XMPP as an alternative connection method and gateway to the XMPP Federation. No doubt they&#8217;ll be some official announcement soon - the news has <a href="http://slashdot.org/article.pl?sid=08/01/18/1748218">reached Slashdot</a>.
+</p><p>
+I&#8217;ve not been active in the Jabber dev community for a couple of years now, but I&#8217;m still an enthusiastic user, and this makes me gleefully happy.
+</p><p>
+Next:  Yahoo and Microsoft. Who&#8217;ll give in first?
+</p><p>
+Link: <a href="http://florianjensen.com/2008/01/17/aol-adopting-xmpp-aka-jabber/">AOL adopting XMPP aka Jabber</a>
+</p><p>
+(In other news <a href="http://www.jabber.com/CE/USMarineCorpsSelectsJabbertoProvidePresenceEnabledSolutions">The USA&#8217;s Marines Corp</a> have adopted XMPP too, and Jabber/XMPP is <a href="https://stpeter.im/?p=2123">nine years old already</a>.)
+</p>
+
+</div>
+  
+  
+
+
+</div>
+
+      </article>
+    
+    </div>
+      <div class="row">
+        <ul class="pager">
+          
+            <li class="previous">
+              <a href="/blog/page/6/">&larr; Older</a>
+            </li>
+          
+          
+            <li class="next">
+              <a class="next" href="/blog/page/4/">Newer &rarr;</a>
+            </li>
+          
+        </ul>
+      </div>
+  </div>
+</div>
+
+
+  <div id="footer-widgets">
+  <div class="container">
+    <div class="row">
+  <div class="span3">
+    <h2>recent posts</h2>
+    <ul class="recent_posts">
+      
+        <li>
+          <a href="/2010/09/george-and-sparkle/">George and Sparkle</a>
+        </li>
+      
+        <li>
+          <a href="/2009/09/double-rainbow-over-ancoats/">Double Rainbow over Ancoats</a>
+        </li>
+      
+        <li>
+          <a href="/2009/06/the-veneer-is-very-thin/">The veneer is very thin</a>
+        </li>
+      
+        <li>
+          <a href="/2009/06/tactical-voting-vs-the-bnp/">Tactical Voting vs The BNP</a>
+        </li>
+      
+        <li>
+          <a href="/2009/05/zebra-in-the-bathroom/">Zebra in the bathroom</a>
+        </li>
+      
+    </ul>
+    <h2><a href="/blog/archives">archives</a></h2>
+  </div>
+  <div class="span3">
+    
+
+  </div>
+  <div class="span4">
+    
+<h2>Twitter</h2>
+<a href="https://twitter.com/binaryape" class="twitter-follow-button" data-show-count="true" data-lang="en">Follow @binaryape</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<div class="tweet" data-twitter-user="binaryape">
+</div>
+
+
+  </div>
+  <div class="span2">
+    <h2>Found on</h2>
+
+<a href="https://github.com/binaryape/" rel="tooltip" title="Github"><img class="social_icon" title="Github" alt="github icon" src="/images/glyphicons_381_github.png"></a>
+
+
+
+
+
+
+
+<a href="http://twitter.com/binaryape" rel="tooltip" title="Twitter"><img class="social_icon" title="Twitter" alt="Twitter icon" src="/images/glyphicons_391_twitter_t.png"></a>
+
+
+
+
+
+
+
+<h2>Contact at</h2>
+<a href="mailto:apetracks@binary-ape.org">apetracks@binary-ape.org</a>
+
+
+  </div>
+</div>
+
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-left">
+  <a href="/">Ape::Tracks</a>
+  - Copyright &copy; 2012 - Binaryape
+</p>
+<p class="pull-right">
+  <span>Powered by <a href="http://octopress.org/">Octopress</a>.</span>
+  
+    <span>Designed by <a href="http://www.AdrianArtiles.com">Adrian Artiles</a>.</span>
+  
+</p>
+
+  </div>
+</footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.7.2.min.js" type="text/javascript"><\/script>')</script>
+<script src="/javascripts/libs/bootstrap.min.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.tweet.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.instagram.js" type="text/javascript"></script>
+<script src="/javascripts/libs/jquery.masonry.min.js" type="text/javascript"></script>
+<script src="/javascripts/custom.js" type="text/javascript"></script>
+
+
+
+
+
+</body>
+</html>
