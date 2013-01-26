@@ -61,7 +61,7 @@
   <div class="span4">
     <h2>About me</h2>
 <p>Photographer, software developer, sysadmin, startup-founder, atheist Buddhist, vegan and Green. Wears a hat.</p>
-<p>This blog reflects my personal opinions only, although most posts are so old they might not even do that.</p>
+<p>This blog reflects my personal opinions only, although most posts are so old they might not even do that anymore.</p>
 
   </div>
   <div class="span6">
@@ -106,6 +106,178 @@
   <div class="container">
     <div class="row" id="post-container">
     
+    
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title"><a href="/2007/12/notes-on-leopard/">Notes on Leopard</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Binaryape</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-07T00:00:00+00:00" pubdate data-updated="true">Dec 7<span>th</span>, 2007</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='//categories/ancient-archives/'>Ancient Archives</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>
+I normally wait and let other people suffer from Point Zero problems, but I got Leopard on release day and immediately upgraded. (This was written weeks ago)
+</p><p>
+Leopard would not install at first - the installer would boot, but my disk wasn&#8217;t shown. It was visible to Disk Utility, and it was even mounted (I like having a shell available in the installer!), but it would not appear. I tried three or four times. My boot partition was called &#8220;system&#8221;. On a hunch I changed its name and tried again, and it appeared immediately. I&#8217;ve not been able to repeat the experiment, so I&#8217;m not 100% sure the name was causing the problem.
+</p><p>
+The extras in the installer (Disk Utility, Terminal) are nice. A tetris game or web browser would have been even nicer, as the install took rather a long time*.
+</p><p>
+Network browsing (Samba, AFP) seems much better. Until now Mac OS hasn&#8217;t been very good at interacting with LAN file shares, but I  think Leopard has got it right at last. Overall speed seemed good too. Windows tends to get slower with each new version, but Mac OS X gets faster.
+</p><p>
+LDAP and Kerberos integration is looking very strong indeed - all sorts of software can take advantage of directory information and Kerberos authentication. Apple are using Sun&#8217;s NFS automounter and it&#8217;s far better than static mounts: just browse on the commandline by cd-ing to servers by name, with Kerberos there to make NFS useful again. There are various LDAP tools that I expect to spend days playing with, like catnip for sysadmins.
+</p><p>
+Spotlight seems to be much more effective and faster. Previously I&#8217;ve not been impressed, but things like Smart Folders now look practical rather than just good in principle.
+</p><p>
+Coverflow views seem slow and gimmicky. Maybe on a faster Mac they&#8217;d be more fluid and responsive.
+</p><p>
+At first I dismissed the Finder&#8217;s new Quick Look preview feature as just a copy of similar elements of Windows and KDE desktops, but it&#8217;s turned out to be much more useful and convenient than I expected.
+</p><p>
+The Dock graphics seem to be a bit tattier. I like the reflective surface but the icons don&#8217;t look quite right. My Mac is a PPC Mac Mini without accelerated graphics, and I wonder if Apple are assuming more powerful Macs when optimising the display.
+</p><p>
+Leopard&#8217;s desktop style (especially the blue colour and icons) reminds me of an old Gnome theme. This is good.
+</p><p>
+Time Machine will not work with network drives, or DMG disk images on network drives. This is very disappointing.
+</p><p>
+Spaces provides a good implementation of multiple desktops, but there&#8217;s no facility to name the spaces. Clicking on the Spaces menu displays a list of numbered desktops with blank areas where names would fit, but there&#8217;s no way to set them. Odd.
+</p><p>
+The new voice is rather good. There&#8217;s just one, and I&#8217;ve heard better, but a huge improvement over the ancient ones.
+</p><p>
+SMB/CIFS mounts are faster and friendlier. There&#8217;s still no reliable way to get them to mount automatically on login other than via an Automator script, but that works well enough. I&#8217;m not sure if it would be better to use Samba for CIFS, or Netatalk for AFP.
+</p><p>
+The default desktop and login screen image is rather gloomy, and a strange choice. Replacing /System/Library/CoreServices/DefaultDesktop.jpg fixes that easily enough.
+</p><p>
+&#8216;Get Info&#8217; on the Finder&#8217;s contextual menus has moved, and &#8216;Move to Trash&#8217; is dangerously close to where &#8216;Get Info&#8217; used to be.
+</p><p>
+Bundled developer software is much better, with less need to head to MacPorts straight away. Subversion is there, Ruby, Ruby Gems, Mongrel and Ruby On Rails too, all with DTrace patches applied. Apple&#8217;s bundling of Ruby on Rails with all Macs is rather significant, I think.
+</p><p>
+I&#8217;m disappointed by the delayed arrival of ZFS and iSCSI in Mac OS. Hopefully they&#8217;ll turn up soon.
+</p><p>
+TextEdit can open and save OpenDocument (.odt) word processor files! This is good news.
+</p><p>
+X11.app  seems to be broken somehow. It doesn&#8217;t X start from the Dock properly, and X forwarding over SSH  during session setup following SSH logins fails - I can&#8217;t simply ssh to a Linux server and run graphical apps. It used to work fine under Tiger.
+</p><p>
+I&#8217;ve had very few problems with incompatible software. The only major trouble so far is that Missing Sync 5 won&#8217;t sync calendars properly (partly due to the authors not updating it, and partly due to bugs in iCal and iSync) and NeoOffice is refusing to open some files over CIFS. Overall I&#8217;m very pleased with Leopard but looking forward to improvements.
+</p><p>
+* Backing up before upgrading took even longer. Fortunately Metroid Prime 3 arrived the same morning, so I was distracted, confused and entertained by that instead.
+</p>
+
+</div>
+  
+  
+
+
+</div>
+
+      </article>
+    
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title"><a href="/2007/12/fumbling/">Fumbling</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Binaryape</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-07T00:00:00+00:00" pubdate data-updated="true">Dec 7<span>th</span>, 2007</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='//categories/ancient-archives/'>Ancient Archives</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>
+I&#8217;m over-cautious and clumsy at the best of times. I&#8217;ve got a second camera lens now and changing them resembles a small-scale surgical operation, with various lids and bits laid out on a flat surface or balanced on bags. I felt like I needed an extra arm. Or a camera strap, I&#8217;ve just realised. I suspect I should worry less.
+</p><p>
+Links: <a href="http://strobist.blogspot.com/2006/06/pro-tip-how-to-quick-change-slr-lens.html">Strobist: Pro Tip: How to Quick-Change an SLR lens</a> and <a href="http://www.clarkvision.com/photoinfo/dslr.changing.lenses/">Changing Lenses on DSLR Cameras</a>
+</p><p>
+This is how I&#8217;ve been <em>trying</em> to do it, but badly. There&#8217;s still a table involved though.
+</p>
+<embed src="http://www.metacafe.com/fplayer/560036/how_to_change_an_slr_lens.swf" width="400" height="345" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"> </embed><br><a href="http://www.metacafe.com/watch/560036/how_to_change_an_slr_lens/">How To Change An SLR Lens</a> 
+<p>
+All that talk of dust remind me that <a href="http://www.goldencompassmovie.com/">The Golden Compass</a> is out now. 
+</p>
+
+</div>
+  
+  
+
+
+</div>
+
+      </article>
     
     
       <article class="span4">
@@ -660,136 +832,6 @@ This is very sad for me, as I remember the days when the Guardian was a newspape
 
       </article>
     
-    
-      <article class="span4">
-        <div class="article-format">
-
-  <header>
-    
-      <h1 class="entry-title"><a href="/2007/06/so-what-do-vegans-eat-then-/">So, What Do Vegans Eat Then?</a></h1>
-    
-    
-      <p class="meta">
-        
-  
-
-
-  
-    <span class="byline author vcard">by <span class="fn">Binaryape</span></span>
-  
-
- - 
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-06-01T00:00:00+01:00" pubdate data-updated="true">Jun 1<span>st</span>, 2007</time> - 
-        
-
-posted in
-<span class="categories">
-  
-    <a class='category' href='//categories/ancient-archives/'>Ancient Archives</a>
-  
-</span>
-
-
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This week was a bit awkward and rather too long but on the other hand it included rather a lot of very good food. During one meal I wondered if there were already any Flickr groups for photos of vegan food, as they&#8217;d be a good way to show off particular dishes, or restaurants, and would help answer the frequent &#8220;so what do you eat then?&#8221; questions.</p>
-
-<p>I&#8217;m tempted to start a Manchester vegan photo group but there are (of course) already many vegan photo groups on Flickr, such as:</p>
-
-<ul><li><a href="http://www.flickr.com/groups/vegan-food-cooking/">Vegan Foods - bought or homemade</a></li><li><a href="http://www.flickr.com/groups/veganbento/">Vegan Bento</a></li><li><a href="http://www.flickr.com/groups/veganrestaurantguide/">Vegan Restaurant Guide</a></li><li><a href="http://www.flickr.com/groups/vvsc/">Vegan Lunchbox</a></li><li><a href="http://www.flickr.com/groups/63838458@N00/">Vegan Pancakes and Waffles</a></li></ul>
-
-
-</div>
-  
-  
-
-
-</div>
-
-      </article>
-    
-    
-      <article class="span4">
-        <div class="article-format">
-
-  <header>
-    
-      <h1 class="entry-title"><a href="/2007/06/a-narrowboat-called-lyra/">A Narrowboat Called Lyra</a></h1>
-    
-    
-      <p class="meta">
-        
-  
-
-
-  
-    <span class="byline author vcard">by <span class="fn">Binaryape</span></span>
-  
-
- - 
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-06-01T00:00:00+01:00" pubdate data-updated="true">Jun 1<span>st</span>, 2007</time> - 
-        
-
-posted in
-<span class="categories">
-  
-    <a class='category' href='//categories/ancient-archives/'>Ancient Archives</a>
-  
-</span>
-
-
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I&#8217;ve just <a href="http://www.binary-ape.org/apetracks/archives/2007/05/23/1276/#comment-3311">posted a comment</a> on an earlier post mentioning that I&#8217;d recently seen a narrowboat named after Lyra, a character from <a href="http://www.amazon.co.uk/Northern-Lights-Subtle-Spyglass-Materials/dp/0439994349/ref=pd_bbs_sr_3/026-4388505-9579632?ie=UTF8&amp;s=books&amp;qid=1180713478&amp;sr=8-3">His Dark Materials</a>. Out of curiosity I searched Google to see if anyone else had mentioned it and found that the crew have a weblog! Here&#8217;s <a href="http://nblyra.blogspot.com/2007/05/lyra-at-very-busy-castlefields-mooring.html">the entry for the day I saw the boat.</a> Narrowboat Lyra is travelling around Britain&#8217;s canals from August 2006 to August 2007. The weblog is a fascinating diary of their journey and has plenty of photos.</p>
-
-<p>I see canal boats going past everyday and grew up near a canal but apart from a couple of brief trips on canal boats at <a href="http://www.bclm.co.uk/map25.htm">The Black Country Museum</a> I&#8217;ve never really travelled by narrowboat. I think a narrowboat holiday might become an ambition.</p>
-
-<p>Manchester has a lot of dodgy looking locks that would seem to make canal travel rather slow and tedious but we still gets lots of cheerfully crewed boats chugging through. Maybe I&#8217;m just too lazy.</p>
-
-<p>Link: <a href="http://nblyra.blogspot.com/">Narrowboat Lyra</a></p>
-
-
-</div>
-  
-  
-
-
-</div>
-
-      </article>
-    
     </div>
       <div class="row">
         <ul class="pager">
@@ -817,6 +859,14 @@ posted in
     <ul class="recent_posts">
       
         <li>
+          <a href="/2012/01/skipping-the-skip/">Skipping the skip</a>
+        </li>
+      
+        <li>
+          <a href="/2012/01/where-was-i/">Where have I been?</a>
+        </li>
+      
+        <li>
           <a href="/2010/09/george-and-sparkle/">George and Sparkle</a>
         </li>
       
@@ -826,14 +876,6 @@ posted in
       
         <li>
           <a href="/2009/06/the-veneer-is-very-thin/">The veneer is very thin</a>
-        </li>
-      
-        <li>
-          <a href="/2009/06/tactical-voting-vs-the-bnp/">Tactical Voting vs The BNP</a>
-        </li>
-      
-        <li>
-          <a href="/2009/05/zebra-in-the-bathroom/">Zebra in the bathroom</a>
         </li>
       
     </ul>
@@ -885,7 +927,7 @@ posted in
   <div class="container">
     <p class="pull-left">
   <a href="/">Ape::Tracks</a>
-  - Copyright &copy; 2012 - Binaryape
+  - Copyright &copy; 2013 - Binaryape
 </p>
 <p class="pull-right">
   <span>Powered by <a href="http://octopress.org/">Octopress</a>.</span>

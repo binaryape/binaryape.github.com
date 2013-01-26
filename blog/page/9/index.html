@@ -61,7 +61,7 @@
   <div class="span4">
     <h2>About me</h2>
 <p>Photographer, software developer, sysadmin, startup-founder, atheist Buddhist, vegan and Green. Wears a hat.</p>
-<p>This blog reflects my personal opinions only, although most posts are so old they might not even do that.</p>
+<p>This blog reflects my personal opinions only, although most posts are so old they might not even do that anymore.</p>
 
   </div>
   <div class="span6">
@@ -106,6 +106,198 @@
   <div class="container">
     <div class="row" id="post-container">
     
+    
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title"><a href="/2007/03/dexter-learns-to-walk/">Dexter Learns to Walk</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Binaryape</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-03-18T00:00:00+00:00" pubdate data-updated="true">Mar 18<span>th</span>, 2007</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='//categories/ancient-archives/'>Ancient Archives</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>and survives impolite pokes in the chest from another robot without falling over</p>
+
+<p>[youtube=http://www.youtube.com/watch?v=_CQ5AKaEi3U]</p>
+
+<p><a href="http://anybots.com/abouttherobots.html">More information about Dexter</a></p>
+
+
+</div>
+  
+  
+
+
+</div>
+
+      </article>
+    
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title"><a href="/2007/03/what-s-not-necessarily-wrong-with-ruby/">What’s Not Necessarily Wrong With Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Binaryape</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-03-17T00:00:00+00:00" pubdate data-updated="true">Mar 17<span>th</span>, 2007</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='//categories/ancient-archives/'>Ancient Archives</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.bitwisemag.com/2/What-s-Wrong-With-Ruby">Bitwise</a> introduces <a href="http://www.bitwisemag.com/2/What-s-Wrong-With-Ruby">&#8216;What‚Äôs Wrong With Ruby?&#8217;</a> with</p>
+
+<blockquote>Matthew Huntbach takes a long hard look at the coolest language on the planet and is distinctly under impressed by what he sees‚Ä¶</blockquote>
+
+<p>That introduction has more than a slight aroma of flamebait. In the actual article Mr Huntbach concludes:</p>
+
+<blockquote>Despite what I‚Äôve written above, I didn‚Äôt find Ruby horrible. If I needed to use a scripting language, it‚Äôs the one I would now use. It‚Äôs cleaner than Perl, and I like its syntax better than Python. Its object-based nature works for me: object-orientation is not the silver bullet, but it is a better abstraction for managing complexity and modelling things than anything else we have. It has picked up some useful aspects from functional programming as well and put them into a language whose ability to handle interaction between stateful objects makes it more practical than pure functional programming (still to me, real elegance, but of an infuriating kind). But it isn‚Äôt as revolutionary or as cool as its advocates suppose.</blockquote>
+
+<p>I can&#8217;t disagree with that at all. Ruby is generating a lot of hype because it can trigger great enthusiasm from the hordes of recently converted PHP and Java programmers. Ruby can also support trendy new paradigms like meta-programing, <a href="http://behaviour-driven.org/">BDD</a> and <a href="http://en.wikipedia.org/wiki/Domain-specific_programming_language">domain-specific languages</a> with ease, so tends to get caught up in all the Cool New Development trends. It&#8217;s zeitgeisty!</p>
+
+<p>Skip over the academic language snobbery (that&#8217;s a whole topic in itself&#8230;) and there&#8217;s nothing really objectionable about the article at all. I find the description of a conference full of programing academics quivering with confusion about the ungodly goings on the real world rather amusing.  <em>People are using </em><strong><em>scripting</em></strong><em> languages!</em> <em>Oh my goodness! Why won&#8217;t they listen to us?</em></p>
+
+<p>I disagree with Matthew Huntbach&#8217;s criticism of Ruby&#8217;s array handling as unintuitive, however.</p>
+
+<blockquote>I‚Äôll give just a couple of examples. In Ruby, if a is [1,2,3] and b is [10,20,30], then a+b is [1,2,3,10,20,30]. Why not [11,22,33], which Tim Sweeney in an earlier article suggests &#8220;intuitively makes sense&#8221;? What does a[x,y] (when a is a two-dimensional array) mean in Ruby? Not what I first supposed it might mean from other languages (otherwise a[x][y]), or even what I then thought it might mean (otherwise a[x..y]).</blockquote>
+
+<p>The plus sign has this functionality for Ruby arrays (all operators are just object methods in Ruby):</p>
+
+<p><code>[1, 2, 3]  +  [4, 5, 6]
+=&gt; [1, 2, 3, 4, 5, 6]
+[1, 2, 3, 4, 5, 6] - [3, 1, 6]
+=&gt; [2, 4, 5]</code>
+<code>[ 1, 2, 3 ] * 3
+=&gt; [1, 2, 3, 1, 2, 3, 1, 2, 3]</code>
+Ruby&#8217;s array is a<em> list</em> that can contain any mix of objects. The plus operator is a method acting on the list object, not its contents. The least surprising results of adding two lists is a longer list, hence the default, sugary behaviour of plus.</p>
+
+<p>Matthew Huntbach would get the behaviour he wanted by using the correct classes, Vector and Matrix.</p>
+
+<p><code>a = Vector[1, 2, 3]
+b = Vector[4, 5, 6]
+a + b
+=&gt; [5, 7, 9]</code>
+If you want to apply a method to the <em>contents</em> of an object, use a map or collection method. Ruby excels at this. One of the reasons Ruby makes me happy is that its array handling is so much more convenient than Perl&#8217;s.</p>
+
+<p>Ruby&#8217;s behaviour will not always be &#8220;intuitive&#8221; if you&#8217;ve spent years working with C based languages, but I think this more often just down to unlearning old habits than flaws in the language itself.  Ruby quite deliberately dumps the non-OOP baggage of C based languages. Ruby was written as a replacement for Perl but is not conceptually descended from Perl, or from C. Its <em>purpose</em> was modelled on Perl, but it&#8217;s ancestry is more closely linked to Lisp and Smalltalk.</p>
+
+<p>Although I think Ruby succeeded in following the principle of least surprise<em> in most cases</em> its fundamental differences from the C based languages do cause a few points of confusion. My own favourite is Ruby&#8217;s evaluation of &#8220;truthiness&#8221;.</p>
+
+<p>In most C-based languages 0, &#8220;&#8221;, undefined are false. Anything else is true.</p>
+
+<p><code>$result = 0;
+print "Hello" if $result;
+=&gt;</code>
+In Ruby only Falseclass and Nilclass are false. Any other defined object is true, including 0 and empty strings.</p>
+
+<p><code>result = 0
+print "Hello" if result
+=&gt; "hello"</code>
+(Both approaches are justifiable but I&#8217;m now happier with Ruby&#8217;s approach. 0 and &#8220;&#8221; are still, present valid data. In my contrived example above 0 is still a result)</p>
+
+<p>Another gotcha is that every named variable is effectively containing a reference to the actual object. By default assignment copies the reference, not the object.</p>
+
+<p><code>a = "HELLO"
+b = a
+a =&gt; "HELLO"
+b =&gt; "HELLO"</p>
+
+<p>a.downcase!
+a =&gt; 'hello'
+b =&gt; 'hello'</code>
+This is rarely a problem but occasional use of .dup is required.</p>
+
+<p><strong>Update:</strong> If you want to read more interesting responses to the Bitwise article then take a look at <a href="http://redhanded.hobix.com/cult/whatSWrongWithRubyHahYeahItSMe.html">Why&#8217;s admission that yes, he is what&#8217;s wrong with Ruby</a>, and make sure you read the comments.</p>
+
+<blockquote>This all coming from a guy whose current interest is the Aldwych programming language.</blockquote>
+
+<p>Ouch.</p>
+
+<p><strong>Update: </strong> <a href="http://www.bitwisemag.com/2/Ruby-s-Inferiority-Complex">Storm in teacup continues at Bitwise</a>!</p>
+
+
+</div>
+  
+  
+
+
+</div>
+
+      </article>
     
     
       <article class="span4">
@@ -673,140 +865,6 @@ posted in
 
       </article>
     
-    
-      <article class="span4">
-        <div class="article-format">
-
-  <header>
-    
-      <h1 class="entry-title"><a href="/2007/02/ecto-and-wordpress-2-1/">Ecto and Wordpress 2.1</a></h1>
-    
-    
-      <p class="meta">
-        
-  
-
-
-  
-    <span class="byline author vcard">by <span class="fn">Binaryape</span></span>
-  
-
- - 
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-02-25T00:00:00+00:00" pubdate data-updated="true">Feb 25<span>th</span>, 2007</time> - 
-        
-
-posted in
-<span class="categories">
-  
-    <a class='category' href='//categories/ancient-archives/'>Ancient Archives</a>
-  
-</span>
-
-
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://ecto.kung-foo.tv/">Ecto</a> looks like a convenient way to update weblogs, so I&#8217;m giving it a try. (If you can&#8217;t get Ecto working with Wordpress 2.1, try upgrading to Wordpress 2.1.1, which fixes xmlrpc problems fetching categories for entries - Ecto would hang with 2.1)</p>
-
-<p>On the other hand Ecto seems unable to save any of my settings at the moment, which diminishes the convenience somewhat&#8230;¬† Update: It saved settings after I posted this.</p>
-
-
-</div>
-  
-  
-
-
-</div>
-
-      </article>
-    
-    
-      <article class="span4">
-        <div class="article-format">
-
-  <header>
-    
-      <h1 class="entry-title"><a href="/2007/02/risc-ix/">RISC iX</a></h1>
-    
-    
-      <p class="meta">
-        
-  
-
-
-  
-    <span class="byline author vcard">by <span class="fn">Binaryape</span></span>
-  
-
- - 
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-02-24T00:00:00+00:00" pubdate data-updated="true">Feb 24<span>th</span>, 2007</time> - 
-        
-
-posted in
-<span class="categories">
-  
-    <a class='category' href='//categories/ancient-archives/'>Ancient Archives</a>
-  
-</span>
-
-
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I own an Acorn R260, an early Archimedes designed to run a BSD variant called <a href="http://en.wikipedia.org/wiki/RISC_iX">RISC iX</a>. The installed OS is broken and I&#8217;ve not got round to fixing it. I&#8217;ve occassionally tried to find install disks on the net so I can reinstall from scratch.</p>
-
-<p>Now I&#8217;ve discovered why. <em>There were no install disks</em>.</p>
-
-<blockquote>
-<p>
-Legal versions of RISC iX either came pre-installed on a R140 or R260, or were installed by Granada Microcare. Acorn did not supply distribution media to customers (although in 2006 a set of 14 floppy discs with an installable copy of RISC iX 1.14 were sold on ebay). If you ordered RISC iX, Grenada Microcare would make an appointment, come along and install it from a tape drive, taking the tape away afterwards.
-</p>
-</blockquote>
-
-<p>From <a href="http://acorn.chriswhy.co.uk/Riscix.html">Chris Acorn&#8217;s RiscIX</a></p>
-
-<p>Thank goodness for Linux and FreeBSD.</p>
-
-
-</div>
-  
-  
-
-
-</div>
-
-      </article>
-    
     </div>
       <div class="row">
         <ul class="pager">
@@ -834,6 +892,14 @@ Legal versions of RISC iX either came pre-installed on a R140 or R260, or were i
     <ul class="recent_posts">
       
         <li>
+          <a href="/2012/01/skipping-the-skip/">Skipping the skip</a>
+        </li>
+      
+        <li>
+          <a href="/2012/01/where-was-i/">Where have I been?</a>
+        </li>
+      
+        <li>
           <a href="/2010/09/george-and-sparkle/">George and Sparkle</a>
         </li>
       
@@ -843,14 +909,6 @@ Legal versions of RISC iX either came pre-installed on a R140 or R260, or were i
       
         <li>
           <a href="/2009/06/the-veneer-is-very-thin/">The veneer is very thin</a>
-        </li>
-      
-        <li>
-          <a href="/2009/06/tactical-voting-vs-the-bnp/">Tactical Voting vs The BNP</a>
-        </li>
-      
-        <li>
-          <a href="/2009/05/zebra-in-the-bathroom/">Zebra in the bathroom</a>
         </li>
       
     </ul>
@@ -902,7 +960,7 @@ Legal versions of RISC iX either came pre-installed on a R140 or R260, or were i
   <div class="container">
     <p class="pull-left">
   <a href="/">Ape::Tracks</a>
-  - Copyright &copy; 2012 - Binaryape
+  - Copyright &copy; 2013 - Binaryape
 </p>
 <p class="pull-right">
   <span>Powered by <a href="http://octopress.org/">Octopress</a>.</span>

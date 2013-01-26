@@ -4,7 +4,7 @@
   <title><![CDATA[Ape::Tracks]]></title>
   <link href="http://binaryape.github.com/atom.xml" rel="self"/>
   <link href="http://binaryape.github.com/"/>
-  <updated>2012-12-24T15:22:36+00:00</updated>
+  <updated>2013-01-26T10:40:32+00:00</updated>
   <id>http://binaryape.github.com/</id>
   <author>
     <name><![CDATA[Binaryape]]></name>
@@ -12,6 +12,70 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Skipping the skip]]></title>
+    <link href="http://binaryape.github.com/2012/01/skipping-the-skip/"/>
+    <updated>2012-01-23T00:00:00+00:00</updated>
+    <id>http://binaryape.github.com/2012/01/skipping-the-skip</id>
+    <content type="html"><![CDATA[<p>Another surprising first for me: I&#8217;ve just bought a copy of Windows.</p>
+
+<p>I&#8217;ve never used an unlicensed copy of Windows but I&#8217;ve also never actually paid for a license before. My previous sources of Microsoft&#8217;s once dominant operating system have been:</p>
+
+<ul>
+<li>Skips</li>
+<li>Office rubbish bins</li>
+<li>Secondhand computer fairs</li>
+<li>Stickers scraped off PCs awaiting bin men</li>
+</ul>
+
+
+<p>As a result I consider my use of Windows so far to be quite good value for money. I haven&#8217;t ever enjoyed it but you can&#8217;t have everything.</p>
+
+<p>I&#8217;ve not run Windows on a the &#8216;bare metal&#8217; of a real PC since the turn of the century - it&#8217;s always been safely inside a VM of some sort. (The my first copy of Windows ran inside an Amiga, although &#8216;ran&#8217; is an inappropriate word to use - it shuffled). Windows has always been something I used when forced to, usually for a chore, and then found itself turned off.  Windows XP these dormant periods led to uncountable hours of OS updates every time I booted the bloody thing, making the chores more of pain, but I digress.</p>
+
+<p>Two things have caused me to buy a new copy of Windows: I need to test DIL websites with IE9 and IE10, and there&#8217;s currently a surprisingly cheap upgrade offer that expires at the end of January 2013 - £24 isn&#8217;t skip-cheap but it&#8217;s a lot better for a penniless startup than £160 or so. The catch is that the download must be purchased from Windows to upgrade an existing system.</p>
+
+<p>After a lot of digging through manuals I discover that I my unsticky license sticker for Windows XP is so safe I can&#8217;t find it, and I remember that I deleted my VM a few months ago to make space for some photo library rearrangements (it was in need of thousands of hours of updates anyway). While considering the purchase of a Windows XP key from EBay I noticed this:</p>
+
+<p>&#8220;You can upgrade to Windows 8 from Windows 7, Windows Vista, Windows XP, Windows 8 Release Preview, Windows 8 Consumer Preview, or Windows Developer Preview&#8221;</p>
+
+<p>Windows 8 Consumer Preview is legitimate upgrade base, and is also a free demo… It&#8217;s no longer publicised on Microsoft&#8217;s website but it&#8217;s still available. There&#8217;s no need to pay for an OS to upgrade from.</p>
+
+<p>Here&#8217;s what you need to know:</p>
+
+<p>Tom&#8217;s Guide have download links (from Microsoft) and a demo license key http://www.tomsguide.com/us/download/Windows-8,0301-43286-42855.html</p>
+
+<p>There&#8217;s a page on About.com explaining how to do a clean install after downloading the upgrade: http://pcsupport.about.com/od/windows-8/a/clean-install-windows-8-upgrade.htm</p>
+
+<p>I&#8217;m not sure if this is a mistake by Microsoft, a cunning plan to sell to users who notice the loophole but otherwise wouldn&#8217;t bother (like me), or the result of painting themselves into a corner with the free preview release.</p>
+
+<p>Either way it&#8217;s worked out quite well: Microsoft get their first money from me, my software should work better with their quirky browser, and I get to save some money.</p>
+
+<p>At the risk of sounding like an advert for Microsoft, the offer ends in a week.</p>
+
+<p><strong>Update:</strong> Aha. The catch is revealed. It&#8217;s possible to make an ISO when downloading the upgrade, and to do a clean install, but the license key you get when buying the upgrade will only work when there are traces of a previous Windows OS. I had to install the Windows 8 Preview and then run the update - a completely new install wouldn&#8217;t work.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Where have I been?]]></title>
+    <link href="http://binaryape.github.com/2012/01/where-was-i/"/>
+    <updated>2012-01-21T00:00:00+00:00</updated>
+    <id>http://binaryape.github.com/2012/01/where-was-i</id>
+    <content type="html"><![CDATA[<p>I&#8217;m back. Where have I been?</p>
+
+<p>Overworking for the University, at first, then trying to do as few things as possible for awhile. Blogging got pushed away - grumbles about work and tiredness and stress wouldn&#8217;t be fun for anyone, and I try to keep my professional life away from here. The things I did and things I thought all became rather dull and inward, even by my standards. I developed a strange habit of starting to write blog posts and then leaving them as drafts until they lost all relevancy. Then I decided to start a huge project of my own, and that took up an awful lot of time.</p>
+
+<p>And my online habits changed, too. When I started blogging I&#8217;d post links for myself as much as others, and turn observations and grumbles into posts. Now Pinboard.in silently absorbs my own bookmarks, Twitter streams away all my inane opinions and Flickr handles anything interesting I get up to out in the real world (although I&#8217;m getting rather behind there too, recently, for different reasons). Blogging has gone from an all-encompassing medium to something of a niche, one niche amongst many.</p>
+
+<p>Hard though it may be to believe, I used to write and edit for a living. As my work gradually become more and more technical and I turned into a sysadmin, occasional blogging let me continue writing - casual and trivial and amateurish but still writing.</p>
+
+<p>I&#8217;ve recently noticed that I can&#8217;t write easily anymore - I can&#8217;t hold the structure in my head, or maintain a flow, or even make sense. It might be age but I suspect it&#8217;s just a lack of practice.</p>
+
+<p>So I&#8217;ll have a go at writing here more often. It probably won&#8217;t be anything worth reading but it might be worth writing, just so I don&#8217;t forget how.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[George and Sparkle]]></title>
@@ -367,54 +431,6 @@ Arteth&#8217;s blog has emerged at last: <a href="http://buscraft.binary-ape.org
     <id>http://binaryape.github.com/2009/03/my-two-thousandth-photograph-on-flickr</id>
     <content type="html"><![CDATA[<p><div style="float: right; margin-left: 10px; margin-bottom: 10px;"> <a href="http://www.flickr.com/photos/binaryape/3402594162/" title="photo sharing"><img src="http://farm4.static.flickr.com/3598/3402594162_53bcf39abb_m.jpg" alt="" style="border: solid 2px #000000;" /></a> <br /> <span style="font-size: 0.9em; margin-top: 0px;">  <a href="http://www.flickr.com/photos/binaryape/3402594162/">Duck in the grass</a>  <br />  Originally uploaded by <a href="http://www.flickr.com/people/binaryape/">BinaryApe</a> </span></div>Never mind the quality, feel the width!<br /><br />I ♡ Flickr<br clear="all" /></p>
 
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Don't Suspect A Friend, Report Him!]]></title>
-    <link href="http://binaryape.github.com/2009/03/don-t-suspect-a-friend-report-him-/"/>
-    <updated>2009-03-31T00:00:00+01:00</updated>
-    <id>http://binaryape.github.com/2009/03/don-t-suspect-a-friend-report-him-</id>
-    <content type="html"><![CDATA[<div>
-<a href="http://www.flickr.com/photos/binaryape/3393630828/" title="photo sharing"><img src="http://farm4.static.flickr.com/3625/3393630828_46ccfd30d3_m.jpg" alt="" style="border: solid 2px #000000;" /></a>
-<br /><a href="http://www.flickr.com/photos/binaryape/3393630828/">Don&#8217;t Suspect A Friend, Report Him!</a> 
-<br />Originally uploaded by <a href="http://www.flickr.com/people/binaryape/">BinaryApe</a> and cross-posted here because he&#8217;s lazy.
-</div><p>
-Why would a suicide bomber or car bomber bother to check where CCTV cameras are? They&#8217;re almost everywhere. <a href="http://www.flickr.com/photos/hbl/3388966957/sizes/l/">What difference would they make?</a>  
-</p><p>
-Another poster in this series encourages people to report neighbours who have &#8220;chemicals&#8221; in their bins. Presumably hobbyist dyers, film developers, etchers, etc will now be suspects.
-</p><p>
-This poster campaign is negative, dangerous scare mongering. 
-</p><p>
-There are some good <a href="http://www.boingboing.net/2009/03/26/remixes-of-the-paran.html">satirical spoofs of the posters</a> at BoingBoing, and here&#8217;s <a href="http://www.flickr.com/photos/ddtv/">someone likely to get reported in Manchester</a>, right there on Flickr. 
-</p><p>
-Want to join in with the paranoia? <a href="http://jamesholden.net/billboard/">Make your own poster online!</a> 
-</p><p>
-(The title is taken from a government poster in Terry Gilliam&#8217;s film Brazil)
-</p>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Manchester City South becomes Corridor Manchester?]]></title>
-    <link href="http://binaryape.github.com/2009/03/manchester-city-south-becomes-corridor-manchester-/"/>
-    <updated>2009-03-28T00:00:00+00:00</updated>
-    <id>http://binaryape.github.com/2009/03/manchester-city-south-becomes-corridor-manchester-</id>
-    <content type="html"><![CDATA[<p>
-While reading <a href="http://www.manchesterconfidential.com/index.asp?sessionx=IpqiNwB6JDbjKaqiNwF6IHqi">Sir Richard Leese does a Big Fat Pipe</a> on Manchester Confidential I thought to myself &#8220;This Manchester Corridor project reminds me of Manchester City South&#8230;&#8221; In fact, it&#8217;s got <a href="http://www.corridormanchester.com/index.php">almost the same website</a>: it looks as if the Manchester City South project has been rebranded.
-</p><p>
-Rather spookily I wrote <a href="http://apetracks.binary-ape.org/2008/03/a-new-oxford-ro.html">a rare blog post</a> on Manchester City South last year and said
-</p><blockquote>
-&#8220;Calling it &#8220;City South&#8221;: A bad idea. [&#8230;] so I&#8217;ll suggest calling it &#8216;The Corridor&#8217;, since people already talk of &#8216;The Oxford Road Corridor&#8217; (and it sounds academic)&#8221;
-</blockquote><p>
-Thanks!
-</p><p>
-Leese&#8217;s Big Fat Pipe is a plan for 100MB &#8216;broadband&#8217; to be made available to flats and offices down Oxford Road. Since most places on Oxford Road are either already on Janet (much faster) or are a takeaway,  I&#8217;m not sure how much of an impact this will have (it would be better in the web-startup-filled Northern Quarter) but decent Internet access is <strong>not to be sniffed at</strong>, wherever it is. Speed is actually less of an issue than symmetric  bandwidth: we need better upload speeds than ADSL can provide.
-</p><p>
-More please!
-</p>
 
 ]]></content>
   </entry>
